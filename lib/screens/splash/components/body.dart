@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:freya/screens/home/home_screen.dart';
+import 'package:freya/screens/report/report_screen.dart';
 import 'package:freya/screens/sign_in/sign_in_screen.dart';
 import 'package:freya/size_config.dart';
 import 'package:freya/constants.dart';
@@ -64,7 +66,7 @@ class _BodyState extends State<Body> {
                     DefaultButton(
                         text: "Try it out",
                         press: () {
-                          Navigator.pushNamed(context, SignInScreen.routeName);
+                          Navigator.pushNamed(context, ReportScreen.routeName);
                         }),
                     Spacer(),
                   ],

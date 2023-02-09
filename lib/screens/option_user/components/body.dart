@@ -8,8 +8,6 @@ class Body extends StatefulWidget {
 class _BodyState extends State<Body> {
   @override
   Widget build(BuildContext context) {
-    // Figma Flutter Generator Body - FRAME
-
     return Container(
         width: 390,
         height: 844,
