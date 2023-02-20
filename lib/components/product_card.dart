@@ -32,7 +32,7 @@ class ProductCard extends StatelessWidget {
                   padding: EdgeInsets.all(getScreenWidth(20)),
                   decoration: BoxDecoration(
                     color: secondaryColor.withOpacity(0.1),
-                    borderRadius: BorderRadius.circular(15),
+                    borderRadius: BorderRadius.circular(20),
                   ),
                   child: Hero(
                     tag: product.id.toString(),
@@ -41,45 +41,6 @@ class ProductCard extends StatelessWidget {
                 ),
               ),
               const SizedBox(height: 10),
-              Text(
-                product.title,
-                style: TextStyle(color: Colors.black),
-                maxLines: 2,
-              ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Text(
-                    "\$${product.price}",
-                    style: TextStyle(
-                      fontSize: getScreenWidth(18),
-                      fontWeight: FontWeight.w600,
-                      color: primaryColor,
-                    ),
-                  ),
-                  InkWell(
-                    borderRadius: BorderRadius.circular(50),
-                    onTap: () {},
-                    child: Container(
-                      padding: EdgeInsets.all(getScreenWidth(8)),
-                      height: getScreenWidth(28),
-                      width: getScreenWidth(28),
-                      decoration: BoxDecoration(
-                        color: product.isFavourite
-                            ? primaryColor.withOpacity(0.15)
-                            : secondaryColor.withOpacity(0.1),
-                        shape: BoxShape.circle,
-                      ),
-                      child: SvgPicture.asset(
-                        "assets/icons/Heart Icon_2.svg",
-                        color: product.isFavourite
-                            ? Color(0xFFFF4848)
-                            : Color(0xFFDBDEE4),
-                      ),
-                    ),
-                  ),
-                ],
-              )
             ],
           ),
         ),

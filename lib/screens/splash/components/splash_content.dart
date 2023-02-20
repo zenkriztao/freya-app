@@ -16,13 +16,10 @@ class SplashContent extends StatelessWidget {
     return Column(
       children: <Widget>[
         Spacer(),
-        Text(
-          "Freya",
-          style: TextStyle(
-            fontSize: getScreenWidth(18),
-            color: primaryColor,
-            fontWeight: FontWeight.bold,
-          ),
+        Image.asset(
+          "assets/images/logo.png",
+          height: getScreenHeight(60),
+          width: getScreenWidth(160),
         ),
         Spacer(flex: 2),
         Image.asset(

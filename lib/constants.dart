@@ -15,4 +15,3 @@ const String passNullError = "Please Enter your password";
 const String shortPassError = "Password is too short";
 const String matchPassError = "Passwords don't match";
 const String nameNullError = "Please Enter your name";
-

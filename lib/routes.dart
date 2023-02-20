@@ -1,4 +1,5 @@
 import 'package:flutter/widgets.dart';
+import 'package:freya/screens/option_user/option_screen.dart';
 import 'package:freya/screens/splash/splash_screen.dart';
 import 'package:freya/screens/sign_in/sign_in_screen.dart';
 import 'package:freya/screens/home/home_screen.dart';
@@ -12,4 +13,5 @@ final Map<String, WidgetBuilder> routes = {
   HomeScreen.routeName: (context) => HomeScreen(),
   ReportScreen.routeName: (context) => ReportScreen(),
   ChatScreen.routeName: (context) => ChatScreen(),
+  OptionScreen.routeName: (context) => OptionScreen(),
 };

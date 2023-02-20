@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:freya/helper/keyboard.dart';
 import 'package:freya/screens/home/home_screen.dart';
-
+import 'package:freya/components/loginCard.dart';
 import '../../../components/sign_button.dart';
 import '../../../constants.dart';
 import '../../../size_config.dart';
@@ -38,11 +38,13 @@ class _SignInContentState extends State<SignInContent> {
       key: _globalKey,
       child: Column(
         children: [
+          SizedBox(height: getScreenHeight(30)),
           Text(
             "Email Address",
+            textAlign: TextAlign.left,
             style: TextStyle(
-              color: Colors.black,
-              fontSize: getScreenWidth(20),
+              color: Color.fromARGB(255, 0, 0, 0),
+              fontSize: getScreenWidth(15),
               fontWeight: FontWeight.bold,
             ),
           ),
@@ -50,9 +52,10 @@ class _SignInContentState extends State<SignInContent> {
           SizedBox(height: getScreenHeight(30)),
           Text(
             "Password",
+            textAlign: TextAlign.left,
             style: TextStyle(
-              color: Colors.black,
-              fontSize: getScreenWidth(20),
+              color: Color.fromARGB(255, 0, 0, 0),
+              fontSize: getScreenWidth(15),
               fontWeight: FontWeight.bold,
             ),
           ),
@@ -83,6 +86,25 @@ class _SignInContentState extends State<SignInContent> {
                   }
                 },
               ),
+              SizedBox(height: getScreenHeight(100)),
+              
+              SizedBox(height: getScreenHeight(30)),
+              Text(
+                "Don't have an account yet?",
+                style: TextStyle(
+                  color: Colors.black,
+                  fontSize: getScreenWidth(16),
+                  fontWeight: FontWeight.bold,
+                )
+              ),
+              Text(
+                "Sign Up",
+                style: TextStyle(
+                  color: Color.fromARGB(255, 184, 78, 78),
+                  fontSize: getScreenWidth(16),
+                  fontWeight: FontWeight.bold,
+                )
+              )
             ],
           ),
         ],

@@ -1,8 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:freya/screens/home/home_screen.dart';
-import 'package:freya/screens/report/report_screen.dart';
-import 'package:freya/screens/chat/chat_screen.dart';
-import 'package:freya/screens/sign_in/sign_in_screen.dart';
 import 'package:freya/size_config.dart';
 import 'package:freya/constants.dart';
 import '../components/splash_content.dart';
@@ -23,6 +20,14 @@ class _BodyState extends State<Body> {
     {
       "text": "Lorem ipsum dolor sit \n amet, consectetur",
       "image": "assets/images/women_2.png"
+    },
+    {
+      "text": "Lorem ipsum dolor sit \n amet, consectetur",
+      "image": "assets/images/women_6.png"
+    },
+    {
+      "text": "Lorem ipsum dolor sit \n amet, consectetur",
+      "image": "assets/images/women_7.png"
     }
   ];
   @override

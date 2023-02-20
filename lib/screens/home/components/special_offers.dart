@@ -13,10 +13,9 @@ class SpecialOffers extends StatelessWidget {
     return Column(
       children: [
         Padding(
-          padding:
-              EdgeInsets.symmetric(horizontal: getScreenWidth(20)),
+          padding: EdgeInsets.symmetric(horizontal: getScreenWidth(20)),
           child: SectionTitle(
-            title: "Special for you",
+            title: "Lorem ipsum",
             press: () {},
           ),
         ),
@@ -26,15 +25,9 @@ class SpecialOffers extends StatelessWidget {
           child: Row(
             children: [
               SpecialOfferCard(
-                image: "assets/images/Image Banner 2.png",
+                image: "assets/images/women_5.png",
                 category: "Smartphone",
                 numOfBrands: 18,
-                press: () {},
-              ),
-              SpecialOfferCard(
-                image: "assets/images/Image Banner 3.png",
-                category: "Fashion",
-                numOfBrands: 24,
                 press: () {},
               ),
               SizedBox(width: getScreenWidth(20)),
@@ -66,15 +59,18 @@ class SpecialOfferCard extends StatelessWidget {
       child: GestureDetector(
         onTap: press,
         child: SizedBox(
-          width: getScreenWidth(242),
-          height: getScreenWidth(100),
+          width: getScreenWidth(300),
+          height: getScreenWidth(200),
           child: ClipRRect(
             borderRadius: BorderRadius.circular(20),
             child: Stack(
               children: [
                 Image.asset(
                   image,
-                  fit: BoxFit.cover,
+                  fit: BoxFit.fill,
+                  alignment:  Alignment.center,
+                  width: 250,
+                  height: 200,
                 ),
                 Container(
                   decoration: BoxDecoration(
@@ -82,29 +78,8 @@ class SpecialOfferCard extends StatelessWidget {
                       begin: Alignment.topCenter,
                       end: Alignment.bottomCenter,
                       colors: [
-                        Color(0xFF343434).withOpacity(0.4),
-                        Color(0xFF343434).withOpacity(0.15),
-                      ],
-                    ),
-                  ),
-                ),
-                Padding(
-                  padding: EdgeInsets.symmetric(
-                    horizontal: getScreenWidth(15.0),
-                    vertical: getScreenWidth(10),
-                  ),
-                  child: Text.rich(
-                    TextSpan(
-                      style: TextStyle(color: Colors.white),
-                      children: [
-                        TextSpan(
-                          text: "$category\n",
-                          style: TextStyle(
-                            fontSize: getScreenWidth(18),
-                            fontWeight: FontWeight.bold,
-                          ),
-                        ),
-                        TextSpan(text: "$numOfBrands Brands")
+                        Color.fromARGB(255, 228, 182, 182).withOpacity(0.4),
+                        Color.fromARGB(255, 228, 182, 182).withOpacity(0.15),
                       ],
                     ),
                   ),
