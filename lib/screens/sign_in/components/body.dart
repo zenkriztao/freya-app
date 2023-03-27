@@ -4,57 +4,55 @@ import '../../../size_config.dart';
 import 'sign_in_content.dart';
 
 class Body extends StatelessWidget {
-    @override
-    Widget build(BuildContext context) {
-      return SafeArea(
+  @override
+  Widget build(BuildContext context) {
+    return SafeArea(
         child: Container(
-          color: Color.fromARGB(255, 212, 71, 71),
-        child: SizedBox(
-          width: double.infinity,
-          child: Padding(
-            padding: 
-            EdgeInsets.symmetric(horizontal: getScreenWidth(20)),
-          child: SingleChildScrollView(
-            child: Column(
-              children: [
+            color: Color.fromARGB(255, 212, 71, 71),
+            child: SizedBox(
+              width: double.infinity,
+              child: SingleChildScrollView(
+                  child: Column(children: [
                 SizedBox(height: SizeConfig.screenHeight * 0.05),
                 Image.asset(
                   "assets/images/logo_white.png",
-                  height: getScreenHeight(150),
-                  width: getScreenWidth(200),
+                  height: getScreenHeight(100),
+                  width: getScreenWidth(300),
                 ),
                 Text(
                   "Log In",
-                style: TextStyle(
-                  color: Color.fromARGB(255, 255, 255, 255),
-                  fontSize: getScreenWidth(28),
-                  fontWeight: FontWeight.bold,
-                ),
-              ),
-              SizedBox(height: SizeConfig.screenHeight * 0.05),
-              Stack(
-                children: [
-                Container(
-                  height: MediaQuery.of(context).size.height * 1.5,
-                  decoration: BoxDecoration(
+                  style: TextStyle(
                     color: Color.fromARGB(255, 255, 255, 255),
-                    borderRadius: BorderRadius.only(
-                      topLeft: Radius.circular(40),
-                      topRight: Radius.circular(40),
-                    ),
+                    fontSize: getScreenWidth(28),
+                    fontWeight: FontWeight.bold,
                   ),
                 ),
-              SizedBox(height: getScreenHeight(10)),
-              SignInContent(),
-              SizedBox(height: getScreenHeight(24)),
-            ],
-              ),
-            ],
-            )
-          ),
-          )
-        )
-        )
-      );
-    }
+                SizedBox(height: SizeConfig.screenHeight * 0.05),
+                Stack(
+                  children: [
+                    Stack(
+                      children: [
+                        Container(
+                          height: MediaQuery.of(context).size.height * 0.8,
+                          decoration: BoxDecoration(
+                            color: Color.fromARGB(255, 255, 255, 255),
+                            borderRadius: BorderRadius.only(
+                              topLeft: Radius.circular(40),
+                              topRight: Radius.circular(40),
+                            ),
+                          ),
+                        ),
+                        SizedBox(height: getScreenHeight(10)),
+                        Padding(
+                          padding: EdgeInsets.symmetric(horizontal: 20),
+                          child: SignInContent(),
+                        ),
+                        SizedBox(height: getScreenHeight(24)),
+                      ],
+                    ),
+                  ],
+                )
+              ])),
+            )));
+  }
 }

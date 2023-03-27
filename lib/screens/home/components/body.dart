@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import '../../../size_config.dart';
 import 'home_header.dart';
 import 'categories.dart';
-import 'popular_product.dart';
+import 'popular_card.dart';
 import 'special_offers.dart';
 
 class Body extends StatelessWidget {
@@ -14,12 +14,13 @@ class Body extends StatelessWidget {
           children: [
             SizedBox(height: getScreenHeight(20)),
             HomeHeader(),
-            SizedBox(height: getScreenWidth(10)),
-            Categories(),
+            SizedBox(height: getScreenWidth(30)),
             SpecialOffers(),
-            SizedBox(height: getScreenWidth(30)),
-            PopularProducts(),
-            SizedBox(height: getScreenWidth(30)),
+            SizedBox(height: getScreenWidth(20)),
+            PopularCards(),
+            SizedBox(height: getScreenWidth(20)),
+            PopularCards(),
+            SizedBox(height: getScreenWidth(20)),
           ],
         ),
       ),

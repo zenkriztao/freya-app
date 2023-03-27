@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:freya/screens/home/home_screen.dart';
+import 'package:freya/screens/sign_in/sign_in_screen.dart';
 import 'package:freya/size_config.dart';
 import 'package:freya/constants.dart';
 import '../components/splash_content.dart';
@@ -14,19 +14,23 @@ class _BodyState extends State<Body> {
   int currentPage = 0;
   List<Map<String, String>> splashData = [
     {
-      "text": "Lorem ipsum dolor sit \n amet, consectetur",
+      "text": "Lorem ipsum dolor sit",
+      "textColor": "\n amet, consectetur",
       "image": "assets/images/women_1.png"
     },
     {
-      "text": "Lorem ipsum dolor sit \n amet, consectetur",
+      "text": "Lorem ipsum dolor sit",
+      "textColor": "\n amet, consectetur",
       "image": "assets/images/women_2.png"
     },
     {
-      "text": "Lorem ipsum dolor sit \n amet, consectetur",
+      "text": "Lorem ipsum dolor sit",
+      "textColor": "\n amet, consectetur",
       "image": "assets/images/women_6.png"
     },
     {
-      "text": "Lorem ipsum dolor sit \n amet, consectetur",
+      "text": "Lorem ipsum dolor sit",
+      "textColor": "\n amet, consectetur",
       "image": "assets/images/women_7.png"
     }
   ];
@@ -49,6 +53,7 @@ class _BodyState extends State<Body> {
                 itemBuilder: (context, index) => SplashContent(
                   image: splashData[index]["image"],
                   text: splashData[index]["text"],
+                  textColor: splashData[index]["textColor"],
                 ),
               ),
             ),
@@ -72,7 +77,7 @@ class _BodyState extends State<Body> {
                     DefaultButton(
                         text: "Try it out",
                         press: () {
-                          Navigator.pushNamed(context, HomeScreen.routeName);
+                          Navigator.pushNamed(context, SignInScreen.routeName);
                         }),
                     Spacer(),
                   ],

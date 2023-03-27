@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:freya/helper/keyboard.dart';
+import 'package:freya/screens/sign_up/sign_up_screen.dart';
 import 'package:freya/screens/home/home_screen.dart';
 import 'package:freya/components/loginCard.dart';
 import '../../../components/sign_button.dart';
+import '../../../components/default_button.dart';
 import '../../../constants.dart';
 import '../../../size_config.dart';
 
@@ -32,87 +34,134 @@ class _SignInContentState extends State<SignInContent> {
       });
   }
 
-  @override 
+  @override
   Widget build(BuildContext context) {
     return Form(
       key: _globalKey,
       child: Column(
         children: [
           SizedBox(height: getScreenHeight(30)),
-          Text(
-            "Email Address",
-            textAlign: TextAlign.left,
-            style: TextStyle(
-              color: Color.fromARGB(255, 0, 0, 0),
-              fontSize: getScreenWidth(15),
-              fontWeight: FontWeight.bold,
-            ),
-          ),
-          buildEmailFormField(),
-          SizedBox(height: getScreenHeight(30)),
-          Text(
-            "Password",
-            textAlign: TextAlign.left,
-            style: TextStyle(
-              color: Color.fromARGB(255, 0, 0, 0),
-              fontSize: getScreenWidth(15),
-              fontWeight: FontWeight.bold,
-            ),
-          ),
-          buildPasswordFormField(),
-          SizedBox(height: getScreenHeight(30)),
           Row(
             children: [
-              // Checkbox(
-              //   value: remember,
-              //   activeColor: primaryColor,
-              //   onChanged: (value) {
-              //     setState(() {
-              //       remember = value;
-              //     });
-              //   },
-              // ), // Checkbox
-              // Text("Remember me"),
-              // Spacer(
-              // ),
-              SizedBox(height: getScreenHeight(20)),
-              SignButton(
-                text: "Log in",
-                press: () {
-                  if (_globalKey.currentState!.validate()) {
-                    _globalKey.currentState!.save();
-                    KeyboardUtil.hideKeyboard(context);
-                    Navigator.pushNamed(context, HomeScreen.routeName); 
-                  }
-                },
+              Padding(
+                padding: EdgeInsets.symmetric(horizontal: getScreenWidth(20)),
+                child: Text(
+                  "Email Address",
+                  textAlign: TextAlign.left,
+                  style: TextStyle(
+                    color: Color.fromARGB(255, 0, 0, 0),
+                    fontSize: getScreenWidth(15),
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
               ),
-              SizedBox(height: getScreenHeight(100)),
-              
-              SizedBox(height: getScreenHeight(30)),
+            ],
+          ),
+          SizedBox(height: getScreenHeight(10)),
+          buildEmailFormField(),
+          SizedBox(height: getScreenHeight(10)),
+          Row(
+            children: [
+              Padding(
+                padding: EdgeInsets.symmetric(horizontal: getScreenWidth(20)),
+             child: Text(
+                "Password",
+                textAlign: TextAlign.left,
+                style: TextStyle(
+                  color: Color.fromARGB(255, 0, 0, 0),
+                  fontSize: getScreenWidth(15),
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+              ),
+            ],
+          ),
+          SizedBox(height: getScreenHeight(10)),
+          buildPasswordFormField(),
+          SizedBox(height: getScreenHeight(10)),
+          Row(
+            children: [
+              Checkbox(
+                value: remember,
+                activeColor: primaryColor,
+                onChanged: (value) {
+                  setState(() {
+                    remember = value;
+                  });
+                },
+              ), // Checkbox
+              Text("Remember me"),
+              Spacer(
+              ),
+              Spacer(),
               Text(
-                "Don't have an account yet?",
+                "Forget Password?",
+                style: TextStyle(fontWeight: FontWeight.bold),
+              ),
+              SizedBox(height: getScreenHeight(5)),
+            ],
+          ),
+          SizedBox(height: getScreenHeight(20)),
+          SignButton(
+            text: "Log in",
+            press: () {
+              if (_globalKey.currentState!.validate()) {
+                _globalKey.currentState!.save();
+                KeyboardUtil.hideKeyboard(context);
+                Navigator.pushNamed(context, HomeScreen.routeName);
+              }
+            },
+          ),
+          SizedBox(height: getScreenHeight(10)),
+          Text("Or",
+              style: TextStyle(
+                fontSize: 20,
+                fontWeight: FontWeight.bold,
+              )),
+          SizedBox(height: getScreenHeight(10)),
+          DefaultButton(
+            text: "Log in with Google",
+            press: () {
+              if (_globalKey.currentState!.validate()) {
+                _globalKey.currentState!.save();
+                KeyboardUtil.hideKeyboard(context);
+                Navigator.pushNamed(context, HomeScreen.routeName);
+              }
+            },
+          ),
+          SizedBox(height: getScreenHeight(20)),
+          Column(children: [
+            Text("Don't have an account yet?",
                 style: TextStyle(
                   color: Colors.black,
                   fontSize: getScreenWidth(16),
                   fontWeight: FontWeight.bold,
-                )
-              ),
-              Text(
-                "Sign Up",
+                )),
+          ]),
+          GestureDetector(
+      onTap: () {
+        // Navigasi ke halaman baru
+        Navigator.push(
+          context,
+          MaterialPageRoute(builder: (context) => SignUpScreen()),
+        );
+      },
+        child:  Column(children: [
+            Text("Sign up",
                 style: TextStyle(
                   color: Color.fromARGB(255, 184, 78, 78),
                   fontSize: getScreenWidth(16),
                   fontWeight: FontWeight.bold,
-                )
-              )
-            ],
-          ),
+                )),
+            
+          ]),
+        )
         ],
       ),
     );
   }
 
-    TextFormField buildPasswordFormField() {
+  TextFormField buildPasswordFormField() {
     return TextFormField(
       obscureText: true,
       onSaved: (newValue) => password = newValue,
@@ -138,9 +187,9 @@ class _SignInContentState extends State<SignInContent> {
         hintText: "saveMe&1010",
         floatingLabelBehavior: FloatingLabelBehavior.always,
         border: OutlineInputBorder(
-        borderSide: BorderSide(),
-        borderRadius: BorderRadius.circular(31),
-      ),
+          borderSide: BorderSide(),
+          borderRadius: BorderRadius.circular(31),
+        ),
       ),
     );
   }
@@ -171,11 +220,10 @@ class _SignInContentState extends State<SignInContent> {
         hintText: "loveSelf@me.com",
         floatingLabelBehavior: FloatingLabelBehavior.always,
         border: OutlineInputBorder(
-        borderSide: BorderSide(),
-        borderRadius: BorderRadius.circular(31),
-      ),
+          borderSide: BorderSide(),
+          borderRadius: BorderRadius.circular(31),
+        ),
       ),
     );
   }
 }
-

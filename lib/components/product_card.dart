@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:freya/models/Product.dart';
-
+import 'package:freya/screens/blog/components/popular_product.dart';
+import 'package:freya/screens/home/components/popular_card.dart';
 import '../constants.dart';
 import '../size_config.dart';
 
