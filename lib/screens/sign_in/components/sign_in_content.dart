@@ -64,15 +64,15 @@ class _SignInContentState extends State<SignInContent> {
             children: [
               Padding(
                 padding: EdgeInsets.symmetric(horizontal: getScreenWidth(20)),
-             child: Text(
-                "Password",
-                textAlign: TextAlign.left,
-                style: TextStyle(
-                  color: Color.fromARGB(255, 0, 0, 0),
-                  fontSize: getScreenWidth(15),
-                  fontWeight: FontWeight.bold,
+                child: Text(
+                  "Password",
+                  textAlign: TextAlign.left,
+                  style: TextStyle(
+                    color: Color.fromARGB(255, 0, 0, 0),
+                    fontSize: getScreenWidth(15),
+                    fontWeight: FontWeight.bold,
+                  ),
                 ),
-              ),
               ),
             ],
           ),
@@ -91,8 +91,7 @@ class _SignInContentState extends State<SignInContent> {
                 },
               ), // Checkbox
               Text("Remember me"),
-              Spacer(
-              ),
+              Spacer(),
               Spacer(),
               Text(
                 "Forget Password?",
@@ -113,49 +112,38 @@ class _SignInContentState extends State<SignInContent> {
             },
           ),
           SizedBox(height: getScreenHeight(10)),
-          Text("Or",
-              style: TextStyle(
-                fontSize: 20,
-                fontWeight: FontWeight.bold,
-              )),
           SizedBox(height: getScreenHeight(10)),
-          DefaultButton(
-            text: "Log in with Google",
-            press: () {
-              if (_globalKey.currentState!.validate()) {
-                _globalKey.currentState!.save();
-                KeyboardUtil.hideKeyboard(context);
-                Navigator.pushNamed(context, HomeScreen.routeName);
-              }
-            },
-          ),
           SizedBox(height: getScreenHeight(20)),
-          Column(children: [
-            Text("Don't have an account yet?",
-                style: TextStyle(
-                  color: Colors.black,
-                  fontSize: getScreenWidth(16),
-                  fontWeight: FontWeight.bold,
-                )),
-          ]),
-          GestureDetector(
-      onTap: () {
-        // Navigasi ke halaman baru
-        Navigator.push(
-          context,
-          MaterialPageRoute(builder: (context) => SignUpScreen()),
-        );
-      },
-        child:  Column(children: [
-            Text("Sign up",
-                style: TextStyle(
-                  color: Color.fromARGB(255, 184, 78, 78),
-                  fontSize: getScreenWidth(16),
-                  fontWeight: FontWeight.bold,
-                )),
-            
-          ]),
-        )
+          SizedBox(height: getScreenHeight(20)),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Text("Dont have an account yet?",
+                  style: TextStyle(
+                    color: Colors.black,
+                    fontSize: getScreenWidth(16),
+                    fontWeight: FontWeight.bold,
+                  )),
+              GestureDetector(
+                onTap: () {
+                  // Navigasi ke halaman baru
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => SignUpScreen()),
+                  );
+                },
+                child: Text(
+                  " Sign Up",
+                  style: TextStyle(
+                    decoration: TextDecoration.underline,
+                    color: Color.fromARGB(255, 184, 78, 78),
+                    fontSize: getScreenWidth(16),
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+              ),
+            ],
+          ),
         ],
       ),
     );
@@ -184,7 +172,7 @@ class _SignInContentState extends State<SignInContent> {
         return null;
       },
       decoration: InputDecoration(
-        hintText: "saveMe&1010",
+        hintText: "Enter password..",
         floatingLabelBehavior: FloatingLabelBehavior.always,
         border: OutlineInputBorder(
           borderSide: BorderSide(),
@@ -217,7 +205,7 @@ class _SignInContentState extends State<SignInContent> {
         return null;
       },
       decoration: InputDecoration(
-        hintText: "loveSelf@me.com",
+        hintText: "ex: freya@gmail.com",
         floatingLabelBehavior: FloatingLabelBehavior.always,
         border: OutlineInputBorder(
           borderSide: BorderSide(),

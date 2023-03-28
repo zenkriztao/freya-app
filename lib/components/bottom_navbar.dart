@@ -58,7 +58,9 @@ class BottomNavBar extends StatelessWidget {
                     Navigator.pushNamed(context, HomeScreen.routeName),
               ),
               IconButton(
-                icon: SvgPicture.asset("assets/icons/chat_icon.svg"),
+                // icon: SvgPicture.asset("assets/icons/chat_icon.svg"),
+                // image
+                icon: Image.asset("assets/images/doctor.png"),
                 onPressed: () =>
                     Navigator.pushNamed(context, AppointmentList.routeName),
               ),

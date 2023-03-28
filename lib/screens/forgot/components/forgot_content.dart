@@ -61,8 +61,7 @@ class _ForgotContentState extends State<ForgotContent> {
           buildEmailFormField(),
           SizedBox(height: getScreenHeight(20)),
           Text(
-            "Enter the email associated with your \naccount and we’ll send an email instruction  reset your password"
-          ),
+              "Enter the email associated with your \naccount and we’ll send an email instruction  reset your password"),
           SizedBox(height: getScreenHeight(20)),
           SignButton(
             text: "Send",
@@ -96,23 +95,22 @@ class _ForgotContentState extends State<ForgotContent> {
                 )),
           ]),
           GestureDetector(
-      onTap: () {
-        // Navigasi ke halaman baru
-        Navigator.push(
-          context,
-          MaterialPageRoute(builder: (context) => SignUpScreen()),
-        );
-      },
-        child:  Column(children: [
-            Text("Login",
-                style: TextStyle(
-                  color: Color.fromARGB(255, 184, 78, 78),
-                  fontSize: getScreenWidth(16),
-                  fontWeight: FontWeight.bold,
-                )),
-            
-          ]),
-        )
+            onTap: () {
+              // Navigasi ke halaman baru
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => SignUpScreen()),
+              );
+            },
+            child: Column(children: [
+              Text("Login",
+                  style: TextStyle(
+                    color: Color.fromARGB(255, 184, 78, 78),
+                    fontSize: getScreenWidth(16),
+                    fontWeight: FontWeight.bold,
+                  )),
+            ]),
+          )
         ],
       ),
     );
@@ -141,7 +139,7 @@ class _ForgotContentState extends State<ForgotContent> {
         return null;
       },
       decoration: InputDecoration(
-        hintText: "saveMe&1010",
+        hintText: "Enter password..",
         floatingLabelBehavior: FloatingLabelBehavior.always,
         border: OutlineInputBorder(
           borderSide: BorderSide(),
@@ -174,7 +172,7 @@ class _ForgotContentState extends State<ForgotContent> {
         return null;
       },
       decoration: InputDecoration(
-        hintText: "loveSelf@me.com",
+        hintText: "ex: freya@gmail.com",
         floatingLabelBehavior: FloatingLabelBehavior.always,
         border: OutlineInputBorder(
           borderSide: BorderSide(),

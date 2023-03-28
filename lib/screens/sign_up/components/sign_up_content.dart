@@ -6,6 +6,7 @@ import '../../../components/sign_button.dart';
 import '../../../components/default_button.dart';
 import '../../../constants.dart';
 import '../../../size_config.dart';
+import '../../sign_in/sign_in_screen.dart';
 
 class SignUpContent extends StatefulWidget {
   @override
@@ -124,41 +125,41 @@ class _SignUpContentState extends State<SignUpContent> {
           SignButton(
             text: "Sign up",
             press: () {
-                Navigator.pushNamed(context, HomeScreen.routeName);
+              Navigator.pushNamed(context, HomeScreen.routeName);
             },
           ),
-          SizedBox(height: getScreenHeight(5)),
-          Text("Or",
-              style: TextStyle(
-                fontSize: 20,
-                fontWeight: FontWeight.bold,
-              )),
           SizedBox(height: getScreenHeight(10)),
-          DefaultButton(
-            text: "Log in with Google",
-            press: () {
-              if (_globalKey.currentState!.validate()) {
-                _globalKey.currentState!.save();
-                KeyboardUtil.hideKeyboard(context);
-                Navigator.pushNamed(context, HomeScreen.routeName);
-              }
-            },
-          ),
           SizedBox(height: getScreenHeight(20)),
-          Column(children: [
-            Text("Already have an account?",
-                style: TextStyle(
-                  color: Colors.black,
-                  fontSize: getScreenWidth(16),
-                  fontWeight: FontWeight.bold,
-                )),
-            Text("Log in",
-                style: TextStyle(
-                  color: Color.fromARGB(255, 184, 78, 78),
-                  fontSize: getScreenWidth(16),
-                  fontWeight: FontWeight.bold,
-                ))
-          ])
+          SizedBox(height: getScreenHeight(20)),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Text("Already have an account yet?",
+                  style: TextStyle(
+                    color: Colors.black,
+                    fontSize: getScreenWidth(16),
+                    fontWeight: FontWeight.bold,
+                  )),
+              GestureDetector(
+                onTap: () {
+                  // Navigasi ke halaman baru
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => SignInScreen()),
+                  );
+                },
+                child: Text(
+                  " Sign In",
+                  style: TextStyle(
+                    decoration: TextDecoration.underline,
+                    color: Color.fromARGB(255, 184, 78, 78),
+                    fontSize: getScreenWidth(16),
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+              ),
+            ],
+          ),
         ],
       ),
     );
@@ -187,7 +188,7 @@ class _SignUpContentState extends State<SignUpContent> {
         return null;
       },
       decoration: InputDecoration(
-        hintText: "saveMe&1010",
+        hintText: "Enter password..",
         floatingLabelBehavior: FloatingLabelBehavior.always,
         border: OutlineInputBorder(
           borderSide: BorderSide(),
@@ -220,7 +221,7 @@ class _SignUpContentState extends State<SignUpContent> {
         return null;
       },
       decoration: InputDecoration(
-        hintText: "loveSelf@me.com",
+        hintText: "ex: freya@gmail.com",
         floatingLabelBehavior: FloatingLabelBehavior.always,
         border: OutlineInputBorder(
           borderSide: BorderSide(),

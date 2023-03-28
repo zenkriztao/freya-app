@@ -1,6 +1,6 @@
 import 'package:flutter/widgets.dart';
 import 'package:freya/screens/option_user/option_screen.dart';
-import 'package:freya/screens/splash/splash_screen.dart';
+import 'package:freya/screens/onboarding/onboarding.dart';
 import 'package:freya/screens/sign_in/sign_in_screen.dart';
 import 'package:freya/screens/sign_up/sign_up_screen.dart';
 import 'package:freya/screens/home/home_screen.dart';
@@ -10,7 +10,7 @@ import 'package:freya/screens/chat/chat_screen.dart';
 import 'package:freya/screens/account/account_screen.dart';
 import 'package:freya/screens/forgot/forgot_screen.dart';
 import 'package:freya/screens/curhat/curhat_screen.dart';
-import 'package:freya/screens/splas/splas_screen.dart';
+import 'package:freya/screens/splash/splash_screen.dart';
 import 'package:freya/screens/counselor/counselor_screen.dart';
 import 'package:freya/screens/tweet/tweet_screen.dart';
 import 'package:freya/screens/blog/blog_page_screen.dart';
@@ -31,7 +31,7 @@ final Map<String, WidgetBuilder> routes = {
   ChatScreen.routeName: (context) => ChatScreen(),
   OptionScreen.routeName: (context) => OptionScreen(),
   AccountScreen.routeName: (context) => AccountScreen(),
-  SplasScreen.routeName: (context) => SplasScreen(),
+  OnboardingScreen.routeName: (context) => OnboardingScreen(),
   CounselorScreen.routeName: (context) => CounselorScreen(),
   TweetScreen.routeName: (context) => TweetScreen(),
   BlogScreenPage.routeName: (context) => BlogScreenPage(),
