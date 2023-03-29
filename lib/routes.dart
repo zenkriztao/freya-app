@@ -7,9 +7,11 @@ import 'package:freya/screens/home/home_screen.dart';
 import 'package:freya/screens/blog/blog_screen.dart';
 import 'package:freya/screens/report/report_screen.dart';
 import 'package:freya/screens/chat/chat_screen.dart';
+import 'package:freya/screens/chat_user/chatuser_screen.dart';
 import 'package:freya/screens/account/account_screen.dart';
 import 'package:freya/screens/forgot/forgot_screen.dart';
 import 'package:freya/screens/curhat/curhat_screen.dart';
+import 'package:freya/screens/curhat_isi/curhat1_screen.dart';
 import 'package:freya/screens/splash/splash_screen.dart';
 import 'package:freya/screens/counselor/counselor_screen.dart';
 import 'package:freya/screens/tweet/tweet_screen.dart';
@@ -27,6 +29,7 @@ final Map<String, WidgetBuilder> routes = {
   HomeScreen.routeName: (context) => HomeScreen(),
   BlogScreen.routeName: (context) => BlogScreen(),
   CurhatScreen.routeName: (context) => CurhatScreen(),
+  Curhat1Screen.routeName: (context) => Curhat1Screen(),
   ReportScreen.routeName: (context) => ReportScreen(),
   ChatScreen.routeName: (context) => ChatScreen(),
   OptionScreen.routeName: (context) => OptionScreen(),
@@ -35,6 +38,7 @@ final Map<String, WidgetBuilder> routes = {
   CounselorScreen.routeName: (context) => CounselorScreen(),
   TweetScreen.routeName: (context) => TweetScreen(),
   BlogScreenPage.routeName: (context) => BlogScreenPage(),
+  ChatUserScreen.routeName: (context) => ChatUserScreen(),
   AppointmentScreen.routeName: (context) => AppointmentScreen(),
   AppointmentList.routeName: (context) => AppointmentList(),
   ForgotScreen.routeName: (context) => ForgotScreen(),
