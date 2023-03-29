@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:freya/screens/chat/chat_screen.dart';
 import 'package:freya/screens/home/home_screen.dart';
 import 'package:freya/screens/blog/blog_screen.dart';
 import 'package:freya/screens/report/report_screen.dart';
@@ -58,9 +59,7 @@ class BottomNavBar extends StatelessWidget {
                     Navigator.pushNamed(context, HomeScreen.routeName),
               ),
               IconButton(
-                // icon: SvgPicture.asset("assets/icons/chat_icon.svg"),
-                // image
-                icon: Image.asset("assets/images/doctor.png"),
+                icon: SvgPicture.asset("assets/icons/chat_icon.svg"),
                 onPressed: () =>
                     Navigator.pushNamed(context, AppointmentList.routeName),
               ),
