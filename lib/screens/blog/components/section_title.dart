@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:freya/screens/blog/blog_page_screen.dart';
 import '../../../size_config.dart';
+import 'blog_page.dart';
 
 class SectionTitle extends StatelessWidget {
   const SectionTitle({
@@ -24,7 +26,13 @@ class SectionTitle extends StatelessWidget {
               fontWeight: FontWeight.bold),
         ),
         GestureDetector(
-          onTap: press,
+          onTap: () => {
+            // Navigasi ke halaman baru
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => BlogScreenPage()),
+            ),
+          },
           child: Text(
             "View all",
             style: TextStyle(color: Color(0xFFBBBBBB)),

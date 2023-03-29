@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:freya/components/sign_button.dart';
+import 'package:freya/screens/chat_user/chatuser_screen.dart';
 import 'package:freya/screens/counselor/counselor_screen.dart';
 import 'package:freya/screens/chat/chat_screen.dart';
 
@@ -77,7 +78,7 @@ class _BodyState extends State<Body> {
                                   if (appointments[index]['status'] ==
                                       'Waiting respon') {
                                     Navigator.pushNamed(
-                                        context, ChatScreen.routeName);
+                                        context, ChatUserScreen.routeName);
                                   }
                                 },
                                 child: Row(

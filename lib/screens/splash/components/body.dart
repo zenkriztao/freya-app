@@ -53,21 +53,6 @@ class _BodyState extends State<Body> {
               height: MediaQuery.of(context).size.width / 1,
             ),
           ),
-          Positioned(
-            bottom: 50,
-            left: 0,
-            right: 0,
-            child: Text(
-              'Lets Start',
-              style: TextStyle(
-                color: Color.fromARGB(255, 143, 27, 27),
-                fontSize: 24,
-                fontStyle: FontStyle.italic,
-                backgroundColor: Colors.white,
-              ),
-              textAlign: TextAlign.center,
-            ),
-          ),
         ],
       ),
     );

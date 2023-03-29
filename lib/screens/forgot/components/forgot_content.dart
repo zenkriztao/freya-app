@@ -7,6 +7,8 @@ import '../../../components/sign_button.dart';
 import '../../../components/default_button.dart';
 import '../../../constants.dart';
 import '../../../size_config.dart';
+import '../../sign_in/sign_in_screen.dart';
+import '../forgot_email.dart';
 
 class ForgotContent extends StatefulWidget {
   @override
@@ -66,11 +68,8 @@ class _ForgotContentState extends State<ForgotContent> {
           SignButton(
             text: "Send",
             press: () {
-              if (_globalKey.currentState!.validate()) {
-                _globalKey.currentState!.save();
                 KeyboardUtil.hideKeyboard(context);
-                Navigator.pushNamed(context, HomeScreen.routeName);
-              }
+                Navigator.pushNamed(context, ForgotEmail.routeName);
             },
           ),
           SizedBox(height: getScreenHeight(10)),
@@ -78,11 +77,8 @@ class _ForgotContentState extends State<ForgotContent> {
           DefaultButton(
             text: "Back",
             press: () {
-              if (_globalKey.currentState!.validate()) {
-                _globalKey.currentState!.save();
                 KeyboardUtil.hideKeyboard(context);
-                Navigator.pushNamed(context, HomeScreen.routeName);
-              }
+                Navigator.pushNamed(context, SignInScreen.routeName);
             },
           ),
           SizedBox(height: getScreenHeight(150)),

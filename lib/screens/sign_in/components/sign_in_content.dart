@@ -1,12 +1,16 @@
 import 'package:flutter/material.dart';
+import 'package:jwt_decode/jwt_decode.dart';
+import 'dart:async';
 import 'package:freya/helper/keyboard.dart';
 import 'package:freya/screens/sign_up/sign_up_screen.dart';
 import 'package:freya/screens/home/home_screen.dart';
 import 'package:freya/components/loginCard.dart';
+import '../../../api/api_endpoint.dart';
 import '../../../components/sign_button.dart';
 import '../../../components/default_button.dart';
 import '../../../constants.dart';
 import '../../../size_config.dart';
+import '../../forgot/forgot_screen.dart';
 
 class SignInContent extends StatefulWidget {
   @override
@@ -15,6 +19,7 @@ class SignInContent extends StatefulWidget {
 
 class _SignInContentState extends State<SignInContent> {
   final _globalKey = GlobalKey<FormState>();
+  // final _apiHelper = ApiHelper();
   String? email;
   String? password;
   bool? remember = false;
@@ -33,6 +38,22 @@ class _SignInContentState extends State<SignInContent> {
         errors.remove(error);
       });
   }
+
+  // void _handleLogin() async {
+  //   if (_globalKey.currentState!.validate()) {
+  //     _globalKey.currentState!.save();
+  //     try {
+  //       final response = await _apiHelper.login(email!, password!);
+  //       if (response['success']) {
+  //         Navigator.pushNamed(context, HomeScreen.routeName);
+  //       } else {
+  //         addError(error: response['message']);
+  //       }
+  //     } catch (e) {
+  //       addError(error: e.toString());
+  //     }
+  //   }
+  // }
 
   @override
   Widget build(BuildContext context) {
@@ -93,22 +114,46 @@ class _SignInContentState extends State<SignInContent> {
               Text("Remember me"),
               Spacer(),
               Spacer(),
-              Text(
+              GestureDetector(
+                onTap: () {
+                  // Navigasi ke halaman baru
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => ForgotScreen()),
+                  );
+                },
+              child: const Text(
                 "Forget Password?",
-                style: TextStyle(fontWeight: FontWeight.bold),
+                style: TextStyle(fontWeight: FontWeight.bold,
+                decoration: TextDecoration.underline),
+              ),
+
               ),
               SizedBox(height: getScreenHeight(5)),
             ],
           ),
           SizedBox(height: getScreenHeight(20)),
+          // SignButton(
+          //   text: "Log in",
+          //   press: () {
+          //     if (_globalKey.currentState!.validate()) {
+          //       _globalKey.currentState!.save();
+          //       // _handleLogin();
+          //       Navigator.push(
+          //           context,
+          //           MaterialPageRoute(builder: (context) => HomeScreen()),
+          //         );
+          //     }
+          //   },
+          // ),
           SignButton(
             text: "Log in",
             press: () {
-              if (_globalKey.currentState!.validate()) {
-                _globalKey.currentState!.save();
+              // if (_globalKey.currentState!.validate()) {
+              //   _globalKey.currentState!.save();
                 KeyboardUtil.hideKeyboard(context);
                 Navigator.pushNamed(context, HomeScreen.routeName);
-              }
+              // }
             },
           ),
           SizedBox(height: getScreenHeight(10)),

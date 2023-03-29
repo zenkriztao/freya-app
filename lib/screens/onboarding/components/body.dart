@@ -14,23 +14,23 @@ class _BodyState extends State<Body> {
   int currentPage = 0;
   List<Map<String, String>> splashData = [
     {
-      "text": "Lorem ipsum dolor sit",
-      "textColor": "\n amet, consectetur",
+      "text": "Scared to talk about",
+      "textColor": "\n how you feel?",
       "image": "assets/images/women_1.png"
     },
     {
-      "text": "Lorem ipsum dolor sit",
-      "textColor": "\n amet, consectetur",
+      "text": "Gender equality is",
+      "textColor": "\n most important",
       "image": "assets/images/women_2.png"
     },
     {
-      "text": "Lorem ipsum dolor sit",
-      "textColor": "\n amet, consectetur",
+      "text": "Women are more likely",
+      "textColor": "\n to be depressed",
       "image": "assets/images/women_6.png"
     },
     {
-      "text": "Lorem ipsum dolor sit",
-      "textColor": "\n amet, consectetur",
+      "text": "Have been in condition ",
+      "textColor": "\n emotions burst?",
       "image": "assets/images/women_7.png"
     }
   ];

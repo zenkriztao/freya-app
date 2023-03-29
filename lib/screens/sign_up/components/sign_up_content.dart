@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:freya/helper/keyboard.dart';
 import 'package:freya/screens/home/home_screen.dart';
 import 'package:freya/components/loginCard.dart';
+import '../../../api/api_endpoint.dart';
 import '../../../components/sign_button.dart';
 import '../../../components/default_button.dart';
 import '../../../constants.dart';
@@ -15,6 +16,7 @@ class SignUpContent extends StatefulWidget {
 
 class _SignUpContentState extends State<SignUpContent> {
   final _globalKey = GlobalKey<FormState>();
+  final _apiHelper = ApiHelper();
   String? email;
   String? password;
   bool? remember = false;
@@ -33,6 +35,22 @@ class _SignUpContentState extends State<SignUpContent> {
         errors.remove(error);
       });
   }
+
+  void _handleRegister () async {
+    if (_globalKey.currentState!.validate()) {
+      _globalKey.currentState!.save();
+      try {
+        final response = await _apiHelper.register(email!, password!);
+        if (response['success']) {
+          Navigator.pushNamed(context, SignInScreen.routeName);
+        } else {
+          addError(error: response['message']);
+        }
+      } catch (e) {
+        addError(error: e.toString());
+      }
+    }
+  } 
 
   @override
   Widget build(BuildContext context) {
@@ -125,7 +143,8 @@ class _SignUpContentState extends State<SignUpContent> {
           SignButton(
             text: "Sign up",
             press: () {
-              Navigator.pushNamed(context, HomeScreen.routeName);
+              _handleRegister();
+              KeyboardUtil.hideKeyboard(context);
             },
           ),
           SizedBox(height: getScreenHeight(10)),

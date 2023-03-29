@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:freya/screens/splas/components/body.dart';
 import 'package:freya/size_config.dart';
+import 'package:freya/screens/chat_user/components/body.dart';
 
-class SplasScreen extends StatelessWidget {
-  static String routeName = './splas';
-  @override
+class ChatUserScreen extends StatelessWidget {
+  static String routeName = "/chat_user";
+  @override 
   Widget build(BuildContext context) {
     SizeConfig().init(context);
     return Scaffold(

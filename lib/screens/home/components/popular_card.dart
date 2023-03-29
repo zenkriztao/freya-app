@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:freya/components/product_card.dart';
 import 'package:freya/screens/blog/blog_screen.dart';
 import 'package:freya/models/Product.dart';
-
 import '../../../size_config.dart';
 import 'section_title.dart';
 

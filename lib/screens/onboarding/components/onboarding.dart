@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-
 import '../../../constants.dart';
 import '../../../size_config.dart';
 
@@ -28,7 +27,9 @@ class OnboardingContent extends StatelessWidget {
           height: getScreenHeight(265),
           width: getScreenWidth(235),
         ),
-        Spacer(flex: 1),
+        SizedBox(
+            height:
+                getScreenHeight(10)), // add this line to adjust the position
         Text(
           text!,
           textAlign: TextAlign.center,
@@ -38,13 +39,16 @@ class OnboardingContent extends StatelessWidget {
             color: primaryColor,
           ),
         ),
-         Text(
+        SizedBox(
+            height:
+                getScreenHeight(0.1)), // add this line to adjust the position
+        Text(
           textColor!,
           textAlign: TextAlign.center,
           style: TextStyle(
             fontSize: getScreenWidth(20),
             fontWeight: FontWeight.bold,
-            color: Color.fromARGB(255, 77, 154, 171)
+            color: Color.fromARGB(255, 77, 154, 171),
           ),
         ),
       ],

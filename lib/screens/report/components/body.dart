@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import '../../../components/sign_button.dart';
+import '../../chat/chat_screen.dart';
 import './report_form.dart';
 
 class Body extends StatelessWidget {
@@ -27,9 +28,14 @@ class Body extends StatelessWidget {
               SizedBox(height: 20),
               ReportForm(),
               SignButton(
-                text: "Report",
-                press: () {},
-              ),
+            text: "Log in",
+            press: () {
+              // if (_globalKey.currentState!.validate()) {
+              //   _globalKey.currentState!.save();
+                Navigator.pushNamed(context, ChatScreen.routeName);
+              // }
+            },
+          ),
             ],
           ),
         ),
