@@ -13,6 +13,8 @@ import 'package:freya/screens/account/account_screen.dart';
 import 'package:freya/screens/option_user/option_screen.dart'; 
 import 'package:freya/screens/chat/chat_screen.dart'; 
 import 'package:freya/screens/splash/splash_screen.dart';
+import 'package:freya/screens/curhat_isi/curhat1_screen.dart';
+import 'package:freya/screens/chat_user/chatuser_screen.dart';
 import 'package:freya/screens/counselor/counselor_screen.dart';
 import 'package:freya/screens/tweet/tweet_screen.dart';
 import 'package:freya/screens/blog/blog_page_screen.dart';
@@ -34,7 +36,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: ThemeData(fontFamily: "Nunito"),
       title: 'Freya',
-      initialRoute: HomeScreen.routeName,
+      initialRoute: SplashScreen.routeName,
       routes: routes,
     );
   }
