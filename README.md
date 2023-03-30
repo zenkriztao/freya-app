@@ -13,15 +13,24 @@ We provide an Opinion Education feature. Capable of providing violence preventio
 
 In line with SDGs Number 16 (Peace, Justice, and Strong Institutions) and 5 (Gender Equality). We hope to provide a solution that can reduce or perhaps end physical, sexual, and psychological violence against women.
 
-## Documentation
+ ## How do we tackle this problem?
 
-* [How to Run Freya Application ](https://github.com/zenkriztao/freya-fe#readme/)
+These are the options we provide:
+
+* Counseling and Complaints Report
+* Share Confide To Other
+* Opinion Education
+
+
+
+
+# [How to Run Freya Application ](https://github.com/zenkriztao/freya-app#readme/)
 
 ## Step 1: Clone Freya Repository
 
 Clone the Freya repository from GitHub using the following command in the terminal:
 
-`git clone https://github.com/zenkriztao/freya-fe.git`
+``git clone https://github.com/zenkriztao/freya-app.git``
 
 ## Step 2: Navigate to Freya Folder
 
