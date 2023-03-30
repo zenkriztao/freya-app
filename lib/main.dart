@@ -1,29 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
+import 'package:flutter_statusbarcolor/flutter_statusbarcolor.dart';
 import 'package:freya/routes.dart';
-import 'package:freya/screens/home/home_screen.dart';
-import 'package:freya/screens/blog/blog_screen.dart';
-import 'package:freya/screens/report/report_screen.dart';
-import 'package:freya/screens/sign_in/sign_in_screen.dart';
-import 'package:freya/screens/sign_up/sign_up_screen.dart';
 import 'package:freya/screens/onboarding/onboarding.dart';
-import 'package:freya/screens/report/report_screen.dart';
-import 'package:freya/screens/curhat/curhat_screen.dart'; 
-import 'package:freya/screens/option_user/option_screen.dart'; 
-import 'package:freya/screens/account/account_screen.dart'; 
-import 'package:freya/screens/option_user/option_screen.dart'; 
-import 'package:freya/screens/chat/chat_screen.dart'; 
-import 'package:freya/screens/splash/splash_screen.dart';
-import 'package:freya/screens/curhat_isi/curhat1_screen.dart';
-import 'package:freya/screens/chat_user/chatuser_screen.dart';
-import 'package:freya/screens/counselor/counselor_screen.dart';
-import 'package:freya/screens/tweet/tweet_screen.dart';
-import 'package:freya/screens/blog/blog_page_screen.dart';
-import 'package:freya/screens/appointment/appointment_screen.dart';
-import 'package:freya/screens/appointment/appointment_list.dart';
-import 'package:freya/screens/forgot/forgot_screen.dart'; 
-import 'package:freya/screens/forgot/forgot_email.dart'; 
-
-
 
 void main() {
   runApp(MyApp());
@@ -32,6 +11,14 @@ void main() {
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+     // status bar color in iOS and Android
+    // FlutterStatusbarcolor.setStatusBarColor(Color.fromARGB(255, 64, 23, 23));
+    // FlutterStatusbarcolor.setStatusBarWhiteForeground(false);
+    // // status bar color in iOS and Android
+    // SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
+    //   statusBarColor: Color.fromARGB(255, 114, 19, 19),
+    //   statusBarIconBrightness: Brightness.dark,
+    // ));
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: ThemeData(fontFamily: "Nunito"),
