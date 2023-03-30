@@ -100,15 +100,6 @@ class _BodyState extends State<Body> {
                       margin: EdgeInsets.all(10),
                       child: Row(
                         children: [
-                          Padding(
-                            padding: const EdgeInsets.all(10),
-                            child: CircleAvatar(
-                              backgroundImage: AssetImage(
-                                'assets/images/dokter_1.png',
-                              ),
-                              radius: 20,
-                            ),
-                          ),
                           Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [

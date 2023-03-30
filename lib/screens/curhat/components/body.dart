@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:freya/screens/tweet/tweet_screen.dart';
 import 'package:freya/size_config.dart';
 import '../../../components/share_button.dart';
-import '../../curhat_isi/curhat1_screen.dart';
+import '../../test_curhat/curhat1_screen.dart';
 
 class Body extends StatelessWidget {
   @override
@@ -30,13 +31,13 @@ class Body extends StatelessWidget {
                     MaterialPageRoute(builder: (context) => Curhat1Screen()),
                   );
                 },
-              child: Padding(
-                  padding: EdgeInsets.symmetric(horizontal: getScreenWidth(30)),
-                  child: Text("What you feels today",
-                      style: TextStyle(
-                        color: Color.fromARGB(255, 167, 160, 160),
-                      ))),
-
+                child: Padding(
+                    padding:
+                        EdgeInsets.symmetric(horizontal: getScreenWidth(30)),
+                    child: Text("What you feels today",
+                        style: TextStyle(
+                          color: Color.fromARGB(255, 167, 160, 160),
+                        ))),
               )
             ]),
             SizedBox(height: 20),
@@ -46,7 +47,13 @@ class Body extends StatelessWidget {
               children: [
                 Padding(
                   padding: EdgeInsets.symmetric(horizontal: getScreenWidth(20)),
-                  child: ShareButton(text: "Share"),
+                  child: ShareButton(
+                    text: "Share",
+                    press: () {
+                      Navigator.pushNamed(context, TweetScreen.routeName);
+                      // }
+                    },
+                  ),
                 ),
               ],
             )

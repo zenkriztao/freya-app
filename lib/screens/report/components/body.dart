@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:freya/screens/appointment/appointment_list.dart';
 import '../../../components/sign_button.dart';
 import '../../chat/chat_screen.dart';
 import './report_form.dart';
@@ -28,11 +29,11 @@ class Body extends StatelessWidget {
               SizedBox(height: 20),
               ReportForm(),
               SignButton(
-            text: "Log in",
+            text: "Make Appointment",
             press: () {
               // if (_globalKey.currentState!.validate()) {
               //   _globalKey.currentState!.save();
-                Navigator.pushNamed(context, ChatScreen.routeName);
+                Navigator.pushNamed(context, AppointmentList.routeName);
               // }
             },
           ),

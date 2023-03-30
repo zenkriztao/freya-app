@@ -37,10 +37,7 @@ class _ReportFormState extends State<ReportForm> {
           buildNameFormField(),
           SizedBox(height: getScreenHeight(30)),
           buildPhoneFormField(),
-          SizedBox(
-            height: getScreenHeight(30),
-            width: getScreenWidth(100),
-          ),
+          SizedBox(height: getScreenHeight(30), width: getScreenWidth(100)),
           buildDescFormField(),
           SizedBox(height: getScreenHeight(1)),
           Row(
@@ -57,22 +54,22 @@ class _ReportFormState extends State<ReportForm> {
 
   TextFormField buildNameFormField() {
     return TextFormField(
-      obscureText: true,
-      onSaved: (newValue) => password = newValue,
+      keyboardType: TextInputType.emailAddress,
+      onSaved: (newValue) => email = newValue,
       onChanged: (value) {
         if (value.isNotEmpty) {
-          removeError(error: passNullError);
-        } else if (value.length >= 8) {
-          removeError(error: shortPassError);
+          removeError(error: emailNullError);
+        } else if (emailValidatorRegExp.hasMatch(value)) {
+          removeError(error: invalidEmailError);
         }
         return null;
       },
       validator: (value) {
         if (value!.isEmpty) {
-          addError(error: passNullError);
+          addError(error: emailNullError);
           return "";
-        } else if (value.length < 8) {
-          addError(error: shortPassError);
+        } else if (!emailValidatorRegExp.hasMatch(value)) {
+          addError(error: invalidEmailError);
           return "";
         }
         return null;
@@ -143,14 +140,17 @@ class _ReportFormState extends State<ReportForm> {
         }
         return null;
       },
+      maxLines: 5, // set jumlah baris maksimal pada TextFormField
       decoration: InputDecoration(
-        hintText: "Do you have any symptoms that vary widely and can affect mood, thinking, and ability to interact with others?",
+        hintText:
+            "Do you have any symptoms that vary widely and can affect mood, thinking, and ability to interact with others?",
+        hintMaxLines: 5, // set jumlah baris maksimal pada hint text
         floatingLabelBehavior: FloatingLabelBehavior.always,
         border: OutlineInputBorder(
           borderSide: BorderSide(color: Colors.brown),
           borderRadius: BorderRadius.circular(31),
         ),
-        contentPadding: EdgeInsets.symmetric(vertical: 100, horizontal: 20),
+        contentPadding: EdgeInsets.symmetric(vertical: 20, horizontal: 20),
       ),
     );
   }
