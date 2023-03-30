@@ -1,6 +1,7 @@
+import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:jwt_decode/jwt_decode.dart';
-import 'dart:async';
+import 'package:http/http.dart' as http;
 import 'package:freya/helper/keyboard.dart';
 import 'package:freya/screens/sign_up/sign_up_screen.dart';
 import 'package:freya/screens/home/home_screen.dart';
@@ -11,6 +12,7 @@ import '../../../components/default_button.dart';
 import '../../../constants.dart';
 import '../../../size_config.dart';
 import '../../forgot/forgot_screen.dart';
+import '../../user.dart';
 
 class SignInContent extends StatefulWidget {
   @override
@@ -38,6 +40,22 @@ class _SignInContentState extends State<SignInContent> {
         errors.remove(error);
       });
   }
+
+  Future save() async {
+    var res = await http.post("http://localhost:5000/signin" as Uri,
+        headers: <String, String>{
+          'Context-Type': 'application/json;charSet=UTF-8'
+        },
+        body: <String, String>{
+          'email': user.email,
+          'password': user.password
+        });
+    print(res.body);
+    Navigator.push(
+        context, new MaterialPageRoute(builder: (context) => HomeScreen()));
+  }
+
+  User user = User('', '');
 
   // void _handleLogin() async {
   //   if (_globalKey.currentState!.validate()) {
@@ -122,12 +140,12 @@ class _SignInContentState extends State<SignInContent> {
                     MaterialPageRoute(builder: (context) => ForgotScreen()),
                   );
                 },
-              child: const Text(
-                "Forget Password?",
-                style: TextStyle(fontWeight: FontWeight.bold,
-                decoration: TextDecoration.underline),
-              ),
-
+                child: const Text(
+                  "Forget Password?",
+                  style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      decoration: TextDecoration.underline),
+                ),
               ),
               SizedBox(height: getScreenHeight(5)),
             ],
@@ -151,8 +169,13 @@ class _SignInContentState extends State<SignInContent> {
             press: () {
               // if (_globalKey.currentState!.validate()) {
               //   _globalKey.currentState!.save();
-                KeyboardUtil.hideKeyboard(context);
-                Navigator.pushNamed(context, HomeScreen.routeName);
+              if (_globalKey.currentState!.validate()) {
+                save();
+              } else {
+                print("not ok");
+              }
+              KeyboardUtil.hideKeyboard(context);
+              Navigator.pushNamed(context, HomeScreen.routeName);
               // }
             },
           ),
