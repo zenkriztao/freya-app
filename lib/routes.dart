@@ -11,7 +11,7 @@ import 'package:freya/screens/chat_user/chatuser_screen.dart';
 import 'package:freya/screens/account/account_screen.dart';
 import 'package:freya/screens/forgot/forgot_screen.dart';
 import 'package:freya/screens/curhat/curhat_screen.dart';
-import 'package:freya/screens/curhat_isi/curhat1_screen.dart';
+import 'package:freya/screens/test_curhat/curhat1_screen.dart';
 import 'package:freya/screens/splash/splash_screen.dart';
 import 'package:freya/screens/counselor/counselor_screen.dart';
 import 'package:freya/screens/tweet/tweet_screen.dart';
