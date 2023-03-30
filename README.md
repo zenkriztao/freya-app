@@ -1,4 +1,11 @@
-## Freya Mobile App
+# Freya Mobile App
+
+<picture>
+      <source media="(prefers-color-scheme: dark)" srcset="https://i.ibb.co/XjHnQVq/logo.png">
+</picture>
+
+<p align="center"><img src="https://i.ibb.co/XjHnQVq/logo.png" alt="logo"></p>
+
 
 Freya is an application built using Flutter
 To assist users in finding information related to violence against women, be it physically, mentally or sexually.
@@ -6,8 +13,9 @@ We provide an Opinion Education feature. Capable of providing violence preventio
 
 In line with SDGs Number 16 (Peace, Justice, and Strong Institutions) and 5 (Gender Equality). We hope to provide a solution that can reduce or perhaps end physical, sexual, and psychological violence against women.
 
+## Documentation
 
-# How to Run Freya Application 
+* [How to Run Freya Application ](https://github.com/zenkriztao/freya-fe#readme/)
 
 ## Step 1: Clone Freya Repository
 
@@ -41,9 +49,16 @@ Alternatively, you can use the following command in the terminal:
 
 `flutter run --release --no-sound-null-safety`
 
+## Figma Design app (Screenshot)
 
+<img src="https://i.ibb.co/N7GFLnL/Screen-Shot-2023-03-30-at-17-57-14.png" alt="UI" width="300" height="300">
 
+## View App
 
+<p align="center">
+  <img src="https://i.ibb.co/85ddS66/Onboarding-Page-4.png" alt="UI" width="300" height="300">
+  <img src="https://i.ibb.co/DGVv9vw/Onbording-Page-2.png" alt="UI" width="300" height="300">
+</p>
 
 
 
