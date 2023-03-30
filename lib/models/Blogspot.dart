@@ -31,7 +31,7 @@ List<Blogspot> demoBlogspots = [
       Color(0xFFDECB9C),
       Colors.white,
     ],
-    title: "",
+    title: "Women",
     description: description,
     isPopular: true,
   ),
