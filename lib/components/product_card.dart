@@ -41,7 +41,16 @@ class ProductCard extends StatelessWidget {
                   ),
                 ),
               ),
-              const SizedBox(height: 10),
+              SizedBox(height: 10),
+              Text(
+                product.title,
+                style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                  fontSize: getScreenWidth(16),
+                ),
+                maxLines: 2,
+                overflow: TextOverflow.ellipsis,
+              ),
             ],
           ),
         ),

@@ -188,7 +188,7 @@ class _AccountContentState extends State<AccountContent> {
         return null;
       },
       decoration: InputDecoration(
-        hintText: "Mintas",
+        hintText: "",
         floatingLabelBehavior: FloatingLabelBehavior.always,
         border: OutlineInputBorder(
           borderSide: BorderSide(),
@@ -221,7 +221,7 @@ class _AccountContentState extends State<AccountContent> {
         return null;
       },
       decoration: InputDecoration(
-        hintText: "Mintas",
+        hintText: "",
         floatingLabelBehavior: FloatingLabelBehavior.always,
         border: OutlineInputBorder(
           borderSide: BorderSide(),
@@ -254,7 +254,7 @@ class _AccountContentState extends State<AccountContent> {
         return null;
       },
       decoration: InputDecoration(
-        hintText: "Mintas",
+        hintText: "",
         floatingLabelBehavior: FloatingLabelBehavior.always,
         border: OutlineInputBorder(
           borderSide: BorderSide(),
