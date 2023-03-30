@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:freya/components/blog_card.dart';
+import 'package:freya/screens/blog/components/popular_product.dart';
 import '../../../size_config.dart';
 import 'home_header.dart';
 import 'categories.dart';
