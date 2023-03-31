@@ -41,21 +41,21 @@ class _SignInContentState extends State<SignInContent> {
       });
   }
 
-  Future save() async {
-    var res = await http.post("http://localhost:5000/signin" as Uri,
-        headers: <String, String>{
-          'Context-Type': 'application/json;charSet=UTF-8'
-        },
-        body: <String, String>{
-          'email': user.email,
-          'password': user.password
-        });
-    print(res.body);
-    Navigator.push(
-        context, new MaterialPageRoute(builder: (context) => HomeScreen()));
-  }
+  // Future save() async {
+  //   var res = await http.post("http://localhost:5000/signin" as Uri,
+  //       headers: <String, String>{
+  //         'Context-Type': 'application/json;charSet=UTF-8'
+  //       },
+  //       body: <String, String>{
+  //         'email': user.email,
+  //         'password': user.password
+  //       });
+  //   print(res.body);
+  //   Navigator.push(
+  //       context, new MaterialPageRoute(builder: (context) => HomeScreen()));
+  // }
 
-  User user = User('', '');
+  // User user = User('', '');
 
   // void _handleLogin() async {
   //   if (_globalKey.currentState!.validate()) {
@@ -169,11 +169,11 @@ class _SignInContentState extends State<SignInContent> {
             press: () {
               // if (_globalKey.currentState!.validate()) {
               //   _globalKey.currentState!.save();
-              if (_globalKey.currentState!.validate()) {
-                save();
-              } else {
-                print("not ok");
-              }
+              // if (_globalKey.currentState!.validate()) {
+              //   save();
+              // } else {
+              //   print("not ok");
+              // }
               KeyboardUtil.hideKeyboard(context);
               Navigator.pushNamed(context, HomeScreen.routeName);
               // }
@@ -204,7 +204,7 @@ class _SignInContentState extends State<SignInContent> {
                   " Sign Up",
                   style: TextStyle(
                     decoration: TextDecoration.underline,
-                    color: Color.fromARGB(255, 184, 78, 78),
+                    color: Color.fromARGB(255, 135, 43, 43),
                     fontSize: getScreenWidth(16),
                     fontWeight: FontWeight.bold,
                   ),

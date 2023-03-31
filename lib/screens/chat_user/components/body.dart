@@ -16,7 +16,7 @@ class _BodyState extends State<Body> {
     _textController.clear();
     ChatMessage message = ChatMessage(
       text: text,
-      sender: "Me",
+      sender: "testing",
       time: DateTime.now().toString(),
     );
     setState(() {
@@ -64,9 +64,9 @@ class _BodyState extends State<Body> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Color.fromARGB(255, 189, 60, 92),
+        backgroundColor: Color.fromARGB(255, 135, 43, 43) ,
         title: Text(
-          'Sarah Mintas',
+          'dr. Siapa ni',
           style: TextStyle(),
         ),
       ),
@@ -78,13 +78,13 @@ class _BodyState extends State<Body> {
               itemBuilder: (BuildContext context, int index) {
                 final ChatMessage message = _messages[index];
                 return Row(
-                  mainAxisAlignment: message.sender == "Me"
+                  mainAxisAlignment: message.sender == "testing"
                       ? MainAxisAlignment.end
                       : MainAxisAlignment.start,
                   children: [
                     Container(
                       decoration: BoxDecoration(
-                        color: message.sender == "Me"
+                        color: message.sender == "testing"
                             ? Color.fromARGB(255, 248, 190, 190)
                             : Colors.white,
                         borderRadius: BorderRadius.circular(10),

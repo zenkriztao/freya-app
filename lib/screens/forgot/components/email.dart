@@ -7,7 +7,7 @@ class Email extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
         child: Container(
-            color: Color.fromARGB(255, 212, 71, 71),
+            color: Color.fromARGB(255, 135, 43, 43),
             child: SizedBox(
               width: double.infinity,
               child: SingleChildScrollView(
@@ -53,14 +53,14 @@ class Email extends StatelessWidget {
                           padding: EdgeInsets.symmetric(
                               horizontal: 30, vertical: 100),
                           child: Text(
-                              "We have sent a password recovery instruction to your registered email.",
-                              textAlign: TextAlign.left, 
-                              style: TextStyle(
-                                color: Color.fromARGB(255, 77, 77, 77),
-                                fontSize: 16,
-                                fontWeight: FontWeight.normal,
-                              ),
-                              ),
+                            "We have sent a password recovery instruction to your registered email.",
+                            textAlign: TextAlign.left,
+                            style: TextStyle(
+                              color: Color.fromARGB(255, 77, 77, 77),
+                              fontSize: 16,
+                              fontWeight: FontWeight.normal,
+                            ),
+                          ),
                         ),
                         SizedBox(height: getScreenHeight(24)),
                         SizedBox(height: getScreenHeight(20)),

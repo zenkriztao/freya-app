@@ -8,7 +8,7 @@ class Body extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
         child: Container(
-            color: Color.fromARGB(255, 212, 71, 71),
+            color: Color.fromARGB(255, 135, 43, 43),
             child: SizedBox(
               width: double.infinity,
               child: SingleChildScrollView(

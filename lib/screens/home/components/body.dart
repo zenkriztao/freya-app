@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:freya/components/blog_card.dart';
+import 'package:freya/screens/blog/blog_screen.dart';
 import 'package:freya/screens/blog/components/popular_product.dart';
 import '../../../size_config.dart';
 import 'home_header.dart';
@@ -14,12 +15,13 @@ class Body extends StatelessWidget {
       child: SingleChildScrollView(
         child: Column(
           children: [
-            SizedBox(height: getScreenHeight(20)),
             HomeHeader(),
             SizedBox(height: getScreenWidth(30)),
             SpecialOffers(),
             SizedBox(height: getScreenWidth(20)),
             PopularCards(),
+            SizedBox(height: getScreenWidth(5)),
+            PopularProducts()
           ],
         ),
       ),

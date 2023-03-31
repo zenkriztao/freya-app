@@ -14,17 +14,12 @@ class HomeHeader extends StatelessWidget {
       children: [
         Container(
           width: double.infinity,
-          height: getScreenHeight(100),
+          height: getScreenHeight(60),
           decoration: BoxDecoration(
             borderRadius: BorderRadius.only(
-              bottomLeft: Radius.circular(20),
-              bottomRight: Radius.circular(60),
+              bottomRight: Radius.circular(50),
             ),
-            gradient: LinearGradient(
-              colors: [Color.fromARGB(246, 175, 67, 67), Color.fromARGB(255, 209, 131, 131)],
-              begin: Alignment.topCenter,
-              end: Alignment.bottomCenter,
-            ),
+            color: Color.fromARGB(255, 135, 43, 43),
           ),
         ),
         Positioned(
@@ -34,10 +29,9 @@ class HomeHeader extends StatelessWidget {
             height: getScreenHeight(50),
             decoration: BoxDecoration(
               borderRadius: BorderRadius.only(
-                topLeft: Radius.circular(40),
-                topRight: Radius.circular(120),
-                bottomLeft: Radius.circular(40)
-              ),
+                  topLeft: Radius.circular(40),
+                  topRight: Radius.circular(120),
+                  ),
               gradient: LinearGradient(
                 colors: [
                   Color.fromARGB(255, 155, 113, 119),

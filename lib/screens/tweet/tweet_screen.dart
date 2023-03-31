@@ -8,10 +8,15 @@ class TweetScreen extends StatelessWidget {
   static String routeName = "/tweet";
   @override
   Widget build(BuildContext context) {
-    SizeConfig().init(context);
     return Scaffold(
-      body: Body(),
-      bottomNavigationBar: BottomNavBar(selectedMenu: MenuState.home),
+      body: Column(
+        children: [
+          Expanded(
+            child: Body(),
+          ),
+          BottomNavBar(selectedMenu: MenuState.favourite),
+        ],
+      ),
     );
   }
 }

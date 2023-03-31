@@ -39,21 +39,21 @@ class _SignUpContentState extends State<SignUpContent> {
       });
   }
 
-  Future save() async {
-    var res = await http.post("http://localhost:5000/signup" as Uri,
-        headers: <String, String>{
-          'Context-Type': 'application/json;charSet=UTF-8'
-        },
-        body: <String, String>{
-          'email': user.email,
-          'password': user.password
-        });
-    print(res.body);
-    Navigator.push(
-        context, new MaterialPageRoute(builder: (context) => SignInScreen()));
-  }
+  // Future save() async {
+  //   var res = await http.post("http://localhost:5000/signup" as Uri,
+  //       headers: <String, String>{
+  //         'Context-Type': 'application/json;charSet=UTF-8'
+  //       },
+  //       body: <String, String>{
+  //         'email': user.email,
+  //         'password': user.password
+  //       });
+  //   print(res.body);
+  //   Navigator.push(
+  //       context, new MaterialPageRoute(builder: (context) => SignInScreen()));
+  // }
 
-  User user = User('', '');
+  // User user = User('', '');
 
   // void _handleRegister () async {
   //   if (_globalKey.currentState!.validate()) {
@@ -163,10 +163,10 @@ class _SignUpContentState extends State<SignUpContent> {
             text: "Sign up",
             press: () {
               // _handleRegister();
-              if (_globalKey.currentState!.validate()) {
-                save();
-                KeyboardUtil.hideKeyboard(context);
-              }
+              // if (_globalKey.currentState!.validate()) {
+              //   save();
+              KeyboardUtil.hideKeyboard(context);
+              Navigator.pushNamed(context, SignInScreen.routeName);
             },
           ),
           SizedBox(height: getScreenHeight(10)),
@@ -193,7 +193,7 @@ class _SignUpContentState extends State<SignUpContent> {
                   " Sign In",
                   style: TextStyle(
                     decoration: TextDecoration.underline,
-                    color: Color.fromARGB(255, 184, 78, 78),
+                    color: Color.fromARGB(255, 135, 43, 43),
                     fontSize: getScreenWidth(16),
                     fontWeight: FontWeight.bold,
                   ),

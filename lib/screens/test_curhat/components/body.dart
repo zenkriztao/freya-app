@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:freya/size_config.dart';
 import '../../../components/share_button.dart';
-import '../../curhat_isi/curhat1_screen.dart';
+import '../../test_curhat/curhat1_screen.dart';
 import '../../tweet/tweet_screen.dart';
 
 class Body extends StatelessWidget {

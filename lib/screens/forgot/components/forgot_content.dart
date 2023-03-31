@@ -68,8 +68,8 @@ class _ForgotContentState extends State<ForgotContent> {
           SignButton(
             text: "Send",
             press: () {
-                KeyboardUtil.hideKeyboard(context);
-                Navigator.pushNamed(context, ForgotEmail.routeName);
+              KeyboardUtil.hideKeyboard(context);
+              Navigator.pushNamed(context, ForgotEmail.routeName);
             },
           ),
           SizedBox(height: getScreenHeight(10)),
@@ -77,8 +77,8 @@ class _ForgotContentState extends State<ForgotContent> {
           DefaultButton(
             text: "Back",
             press: () {
-                KeyboardUtil.hideKeyboard(context);
-                Navigator.pushNamed(context, SignInScreen.routeName);
+              KeyboardUtil.hideKeyboard(context);
+              Navigator.pushNamed(context, SignInScreen.routeName);
             },
           ),
           SizedBox(height: getScreenHeight(150)),
@@ -101,7 +101,7 @@ class _ForgotContentState extends State<ForgotContent> {
             child: Column(children: [
               Text("Login",
                   style: TextStyle(
-                    color: Color.fromARGB(255, 184, 78, 78),
+                    color: Color.fromARGB(255, 135, 43, 43),
                     fontSize: getScreenWidth(16),
                     fontWeight: FontWeight.bold,
                   )),

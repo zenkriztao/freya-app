@@ -8,10 +8,15 @@ class AppointmentList extends StatelessWidget {
     static String routeName = "/appointment-list";
     @override
     Widget build(BuildContext context) {
-        SizeConfig().init(context);
-        return Scaffold(
-            body: Body(),
-            bottomNavigationBar: BottomNavBar(selectedMenu: MenuState.home),
-        );
-    }
+    return Scaffold(
+      body: Column(
+        children: [
+          Expanded(
+            child: Body(),
+          ),
+          BottomNavBar(selectedMenu: MenuState.message),
+        ],
+      ),
+    );
+  }
 }

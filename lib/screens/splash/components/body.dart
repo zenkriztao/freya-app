@@ -13,14 +13,14 @@ class _BodyState extends State<Body> {
   void initState() {
     super.initState();
     Timer(const Duration(seconds: 6), () {
-      Navigator.pushReplacementNamed(context, '/splash');
+      Navigator.pushReplacementNamed(context, '/onboarding');
     });
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color.fromARGB(255, 131, 36, 36),
+      backgroundColor: Color.fromARGB(255, 135, 43, 43),
       body: Stack(
         children: [
           Positioned(

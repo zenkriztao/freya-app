@@ -8,10 +8,15 @@ class AccountScreen extends StatelessWidget {
   @override
   static String routeName = './account';
   Widget build(BuildContext context) {
-    SizeConfig().init(context);
     return Scaffold(
-      body: Body(),
-      bottomNavigationBar: BottomNavBar(selectedMenu: MenuState.home),
+      body: Column(
+        children: [
+          Expanded(
+            child: Body(),
+          ),
+          BottomNavBar(selectedMenu: MenuState.profile),
+        ],
+      ),
     );
   }
 }
