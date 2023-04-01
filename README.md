@@ -24,6 +24,11 @@ These are the options we provide:
 
 
 
+Freya Assets : 
+* https://github.com/aziemp66/freya-be (Freya Back-End)
+* https://github.com/zidane-arkan/Freya...  (Freya Website)
+
+
 # [How to Run Freya Application ](https://github.com/zenkriztao/freya-app#readme/)
 
 ## Step 1: Clone Freya Repository
