@@ -13,7 +13,7 @@
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
-	<string>com.example.healthApp</string>
+	<string>com.example.freya</string>
 	<key>PROJECT_ID</key>
 	<string>freya-final</string>
 	<key>STORAGE_BUCKET</key>
