@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "868519210205",
+    "firebase_url": "https://freya-final-default-rtdb.firebaseio.com",
+    "project_id": "freya-final",
+    "storage_bucket": "freya-final.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:868519210205:android:dfdb967640a1f7ff9bff34",
+        "android_client_info": {
+          "package_name": "com.example.freya"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "868519210205-jhk7mkq5p9q7k4l4qlero5dussv9q272.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAxux3Z6sjA-d5KNxRCLETuD3Nga-ckRRo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "868519210205-79m8gu8gp2atq1bqntgs2lq9hb8tqgr9.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "868519210205-u0emt1e90odf476ksm5tgg38d1qtbckl.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.healthApp"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

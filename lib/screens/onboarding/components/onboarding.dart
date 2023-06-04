@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import '../../../constants.dart';
-import '../../../size_config.dart';
+import 'package:freya/constant/constants.dart';
+import 'package:freya/constant/size_config.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class OnboardingContent extends StatelessWidget {
   const OnboardingContent({
@@ -17,7 +18,7 @@ class OnboardingContent extends StatelessWidget {
       children: <Widget>[
         Spacer(),
         Image.asset(
-          "assets/images/logo.png",
+          "assets/logo.png",
           height: getScreenHeight(60),
           width: getScreenWidth(160),
         ),
@@ -33,7 +34,7 @@ class OnboardingContent extends StatelessWidget {
         Text(
           text!,
           textAlign: TextAlign.center,
-          style: TextStyle(
+          style: GoogleFonts.nunito(
             fontSize: getScreenWidth(24),
             fontWeight: FontWeight.bold,
             color: primaryColor,
@@ -45,7 +46,7 @@ class OnboardingContent extends StatelessWidget {
         Text(
           textColor!,
           textAlign: TextAlign.center,
-          style: TextStyle(
+          style: GoogleFonts.nunito(
             fontSize: getScreenWidth(20),
             fontWeight: FontWeight.bold,
             color: Color.fromARGB(255, 77, 154, 171),

@@ -1,29 +1,59 @@
+import 'package:firebase_auth/firebase_auth.dart';
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
-// import 'package:flutter_statusbarcolor/flutter_statusbarcolor.dart';
-import 'package:freya/routes.dart';
-import 'package:freya/screens/splash/splash_screen.dart';
+import 'package:freya/globals.dart';
+import 'package:freya/screens/doctor/main_page_doctor.dart';
+import 'package:freya/screens/doctor_or_patient.dart';
+import 'package:freya/screens/firebase_auth.dart';
+import 'package:freya/screens/my_profile.dart';
+import 'package:freya/screens/onboarding/onboarding.dart';
+import 'package:freya/screens/patient/appointments.dart';
+import 'package:freya/screens/patient/doctor_profile.dart';
+import 'package:freya/screens/patient/main_page_patient.dart';
 
-void main() {
-  runApp(MyApp());
+import 'firebase_options.dart';
+
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
+
+  runApp(const MyApp());
 }
 
-class MyApp extends StatelessWidget {
+class MyApp extends StatefulWidget {
+  const MyApp({Key? key}) : super(key: key);
+
+  @override
+  State<MyApp> createState() => _MyAppState();
+}
+
+class _MyAppState extends State<MyApp> {
+  final FirebaseAuth _auth = FirebaseAuth.instance;
+
+  User? user;
+
+  Future<void> _getUser() async {
+    user = _auth.currentUser!;
+  }
+
   @override
   Widget build(BuildContext context) {
-    // FlutterStatusbarcolor.setStatusBarColor(Color.fromARGB(255, 135, 43, 43));
-    // FlutterStatusbarcolor.setStatusBarWhiteForeground(false);
-    // status bar color in iOS and Android
-    SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
-      statusBarColor: Color.fromARGB(255, 135, 43, 43),
-      statusBarIconBrightness: Brightness.light,
-    ));
+    _getUser();
     return MaterialApp(
+      initialRoute: '/',
+      routes: {
+        '/': (context) => user == null ? OnboardingScreen() : const DoctorOrPatient(),
+        '/login': (context) => const FireBaseAuth(),
+        '/home': (context) =>
+            isDoctor ? const MainPageDoctor() : const MainPagePatient(),
+        '/profile': (context) => const MyProfile(),
+        '/MyAppointments': (context) => const Appointments(),
+        '/DoctorProfile': (context) => DoctorProfile(),
+      },
+      theme: ThemeData(fontFamily: "Nunito", brightness: Brightness.light),
       debugShowCheckedModeBanner: false,
-      theme: ThemeData(fontFamily: "Nunito"),
-      title: 'Freya',
-      initialRoute: SplashScreen.routeName,
-      routes: routes,
     );
   }
 }

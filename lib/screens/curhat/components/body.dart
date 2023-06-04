@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:freya/screens/tweet/tweet_screen.dart';
-import 'package:freya/size_config.dart';
-import '../../../components/share_button.dart';
-import '../../test_curhat/curhat1_screen.dart';
+import 'package:freya/constant/size_config.dart';
+import 'package:freya/screens/share_button.dart';
+import 'package:freya/screens/test_curhat/curhat1_screen.dart';
 
 class Body extends StatelessWidget {
   @override
@@ -47,13 +46,13 @@ class Body extends StatelessWidget {
               children: [
                 Padding(
                   padding: EdgeInsets.symmetric(horizontal: getScreenWidth(20)),
-                  child: ShareButton(
-                    text: "Share",
-                    press: () {
-                      Navigator.pushNamed(context, TweetScreen.routeName);
-                      // }
-                    },
-                  ),
+                  // child: ShareButton(
+                  //   text: "Share",
+                  //   press: () {
+                  //     Navigator.pushNamed(context, TweetScreen.routeName);
+                  //     // }
+                  //   },
+                  // ),
                 ),
               ],
             )

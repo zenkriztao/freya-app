@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:freya/constant/size_config.dart';
+import 'package:freya/screens/share_button.dart';
 import 'package:freya/size_config.dart';
-import '../../../components/share_button.dart';
-import '../../test_curhat/curhat1_screen.dart';
-import '../../tweet/tweet_screen.dart';
 
 class Body extends StatelessWidget {
   @override
@@ -40,7 +39,6 @@ class Body extends StatelessWidget {
             child: ShareButton(
               text: "Share",
               press: () {
-                Navigator.pushNamed(context, TweetScreen.routeName);
                 // }
               },
             ),

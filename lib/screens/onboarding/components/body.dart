@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:freya/screens/sign_in/sign_in_screen.dart';
-import 'package:freya/size_config.dart';
-import 'package:freya/constants.dart';
+import 'package:freya/screens/default_button.dart';
+import 'package:freya/screens/firebase_auth.dart';
+import 'package:freya/constant/constants.dart';
+import 'package:freya/constant/size_config.dart';
 import 'onboarding.dart';
-import '../../../components/default_button.dart';
 
 class Body extends StatefulWidget {
   @override
@@ -16,22 +16,22 @@ class _BodyState extends State<Body> {
     {
       "text": "Scared to talk about",
       "textColor": "\n how you feel?",
-      "image": "assets/images/women_1.png"
+      "image": "assets/women_1.png"
     },
     {
       "text": "Gender equality is",
       "textColor": "\n most important",
-      "image": "assets/images/women_2.png"
+      "image": "assets/disease.png"
     },
     {
       "text": "Women are more likely",
       "textColor": "\n to be depressed",
-      "image": "assets/images/women_6.png"
+      "image": "assets/women_2.png"
     },
     {
       "text": "Have been in condition ",
       "textColor": "\n emotions burst?",
-      "image": "assets/images/women_7.png"
+      "image": "assets/doc.png"
     }
   ];
   @override
@@ -76,9 +76,9 @@ class _BodyState extends State<Body> {
                     ),
                     DefaultButton(
                         text: "Try it out",
-                        press: () {
-                          Navigator.pushNamed(context, SignInScreen.routeName);
-                        }),
+                        press: () =>
+                          _pushPage(context, const FireBaseAuth())
+                        ),
                     Spacer(),
                   ],
                 ),
@@ -90,7 +90,13 @@ class _BodyState extends State<Body> {
     );
   }
 
-  AnimatedContainer buildDot({int? index}) {
+
+  void _pushPage(BuildContext context, Widget page) {
+    Navigator.of(context).push(
+      MaterialPageRoute<void>(builder: (_) => page),
+    );
+  }
+   AnimatedContainer buildDot({int? index}) {
     return AnimatedContainer(
       duration: animationDuration,
       margin: EdgeInsets.only(right: 5),
@@ -102,3 +108,7 @@ class _BodyState extends State<Body> {
     );
   }
 }
+
+
+ 
+

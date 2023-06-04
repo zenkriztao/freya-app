@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:freya/components/loginCard.dart';
-import '../../../size_config.dart';
+import 'package:freya/constant/size_config.dart';
 import 'sign_in_content.dart';
 
 class Body extends StatelessWidget {
@@ -15,7 +14,7 @@ class Body extends StatelessWidget {
                   child: Column(children: [
                 SizedBox(height: SizeConfig.screenHeight * 0.05),
                 Image.asset(
-                  "assets/images/logo_white.png",
+                  "assets/logo.png",
                   height: getScreenHeight(100),
                   width: getScreenWidth(300),
                 ),
@@ -45,7 +44,7 @@ class Body extends StatelessWidget {
                         SizedBox(height: getScreenHeight(10)),
                         Padding(
                           padding: EdgeInsets.symmetric(horizontal: 20),
-                          child: SignInContent(),
+                          child: SignIn(),
                         ),
                         SizedBox(height: getScreenHeight(24)),
                       ],

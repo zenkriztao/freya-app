@@ -1,1 +1,0 @@
-class InvalidUserException implements Exception {}

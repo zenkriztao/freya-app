@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'components/body.dart';
-import 'package:freya/size_config.dart';
+import 'package:freya/constant/size_config.dart';
 
 class SignInScreen extends StatelessWidget {
   static String routeName = "/sign_in";
