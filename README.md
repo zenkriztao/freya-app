@@ -71,13 +71,13 @@ Alternatively, you can use the following command in the terminal:
 
 ## DATA ACCOUNT USER
 
-`Email : zidane@gmail.com`
+`Email : putri@gmail.com`
 
 `Password: semangat`
 
 ## DATA ACCOUNT PYSCHOLOG
 
-`Email : diban@gmail.com`
+`Email : teresa@gmail.com`
 
 `Password: semangat`
 
