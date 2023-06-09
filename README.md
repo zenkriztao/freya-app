@@ -63,6 +63,16 @@ Alternatively, you can use the following command in the terminal:
 
 `flutter run --release --no-sound-null-safety`
 
+## DATA ACCOUNT USER
+
+`Email : zidane@gmail.com`
+`Password: semangat`
+
+## DATA ACCOUNT PYSCHOLOG
+
+`Email : diban@gmail.com`
+`Password: semangat`
+
 ## Figma Design app (Screenshot)
 
 <img src="https://i.ibb.co/N7GFLnL/Screen-Shot-2023-03-30-at-17-57-14.png" alt="UI" width="300" height="300">
