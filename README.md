@@ -24,13 +24,16 @@ These are the options we provide:
 ## Next fitur (coming soon)
 - SOS Button & Quickly share location and share it with all your close friends and family contacts
 - Donate feature for abused women campaign & womens humanitarian programs
-- Video calls between doctors
+- Video calls between doctors (trusted mental health doctor)
 
 
 Freya Assets : 
 * https://github.com/aziemp66/freya-be (Freya Back-End)
 * https://github.com/zidane-arkan/Freya...  (Freya Website)
 
+## Download Apps
+
+https://drive.google.com/drive/folders/1tkwbDUVML6-7dt48qrkHcn9s-zJd4Osf?usp=drive_link
 
 # [How to Run Freya Application ](https://github.com/zenkriztao/freya-app#readme/)
 
