@@ -21,7 +21,10 @@ These are the options we provide:
 * Share Confide To Other
 * Opinion Education
 
-
+## Next fitur (coming soon)
+- SOS Button & Quickly share location and share it with all your close friends and family contacts
+- Donate feature for abused women campaign & womens humanitarian programs
+- Video calls between doctors
 
 
 Freya Assets : 
@@ -66,11 +69,13 @@ Alternatively, you can use the following command in the terminal:
 ## DATA ACCOUNT USER
 
 `Email : zidane@gmail.com`
+
 `Password: semangat`
 
 ## DATA ACCOUNT PYSCHOLOG
 
 `Email : diban@gmail.com`
+
 `Password: semangat`
 
 ## Figma Design app (Screenshot)
