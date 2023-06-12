@@ -35,6 +35,10 @@ Freya Assets :
 
 https://drive.google.com/drive/folders/1tkwbDUVML6-7dt48qrkHcn9s-zJd4Osf?usp=drive_link
 
+## YouTube Demo
+
+https://www.youtube.com/watch?v=Wo3emASPPIA
+
 # [How to Run Freya Application ](https://github.com/zenkriztao/freya-app#readme/)
 
 ## Step 1: Clone Freya Repository
