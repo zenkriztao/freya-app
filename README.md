@@ -1,3 +1,5 @@
+https://blog.google/intl/id-id/company-news/outreach-initiatives/2023_05_9-tim-developer-indonesia-lolos-gdsc-solution-challenge/
+
 # Freya Mobile App
 
 <picture>
