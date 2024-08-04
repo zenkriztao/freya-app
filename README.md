@@ -1,7 +1,6 @@
 https://blog.google/intl/id-id/company-news/outreach-initiatives/2023_05_9-tim-developer-indonesia-lolos-gdsc-solution-challenge/
-<picture>
-      <source media="(prefers-color-scheme: dark)" srcset="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjEE6JoCVmdqEFj7UlTwUoxREn3HbxF3wuQoQV0fAeMtF-kVrb6WaOl0auVv1MjGst_Vjze9Q4Jp7HZqh72W1M3FzBrtifW569RuTLkoEl3yINYNAUwiQ3tsvbrQYmnQLlSjG3Uy14lVocJ3p0gmUbZkDIBxZRARfvlwRq2koLHTj0q-BcXxvuhOMWm/w640-h336/Tim%20Freya.png">
-</picture>
+
+<img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjEE6JoCVmdqEFj7UlTwUoxREn3HbxF3wuQoQV0fAeMtF-kVrb6WaOl0auVv1MjGst_Vjze9Q4Jp7HZqh72W1M3FzBrtifW569RuTLkoEl3yINYNAUwiQ3tsvbrQYmnQLlSjG3Uy14lVocJ3p0gmUbZkDIBxZRARfvlwRq2koLHTj0q-BcXxvuhOMWm/w640-h336/Tim%20Freya.png" alt="UI" width="300" height="300">
 
 # Freya Mobile App
 
